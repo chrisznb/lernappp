@@ -27,15 +27,15 @@ export default async function DashboardPage() {
 
   // Fetch today's goal
   const today = new Date().toISOString().split('T')[0]
-  let { data: todayGoal } = await supabase
+  let { data: todayGoal, error: goalError } = await supabase
     .from('daily_goals')
     .select('*')
     .eq('user_id', user.id)
     .eq('goal_date', today)
-    .single() as any
+    .maybeSingle() as any
 
   // Auto-create daily goal if it doesn't exist
-  if (!todayGoal) {
+  if (!todayGoal || goalError) {
     const { data: newGoal } = await (supabase
       .from('daily_goals')
       .insert as any)({
@@ -47,7 +47,7 @@ export default async function DashboardPage() {
         completed_minutes: 0,
       })
       .select()
-      .single()
+      .maybeSingle()
     todayGoal = newGoal
   }
 

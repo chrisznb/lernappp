@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import MobileNav from './MobileNav'
 
 export default async function DashboardLayout({
   children,
@@ -29,7 +30,8 @@ export default async function DashboardLayout({
       <nav className="border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-4">
+              <MobileNav />
               <Link href="/dashboard" className="text-xl font-bold">
                 StudyFlow
               </Link>
@@ -44,19 +46,19 @@ export default async function DashboardLayout({
                   href="/dashboard/subjects"
                   className="text-sm font-medium hover:text-primary transition-colors"
                 >
-                  Fächer
+                  Subjects
                 </Link>
                 <Link
                   href="/dashboard/stats"
                   className="text-sm font-medium hover:text-primary transition-colors"
                 >
-                  Statistiken
+                  Statistics
                 </Link>
               </div>
             </div>
             <form action={signOut}>
               <Button variant="outline" size="sm">
-                Abmelden
+                Sign Out
               </Button>
             </form>
           </div>

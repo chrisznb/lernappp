@@ -274,20 +274,9 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
       {/* Card Display */}
       <Card className="mb-6">
         <CardHeader>
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm text-muted-foreground">
-              Karte {currentIndex + 1} von {cards.length}
-            </CardTitle>
-            {currentCard.tags && currentCard.tags.length > 0 && (
-              <div className="flex gap-2 flex-wrap">
-                {currentCard.tags.slice(0, 3).map((tag, i) => (
-                  <Badge key={i} variant="secondary" className="text-xs">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            )}
-          </div>
+          <CardTitle className="text-sm text-muted-foreground">
+            Card {currentIndex + 1} of {cards.length}
+          </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           {/* Basic Card Type */}
