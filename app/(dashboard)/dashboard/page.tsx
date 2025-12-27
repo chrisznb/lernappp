@@ -13,11 +13,28 @@ export default async function DashboardPage() {
   if (!user) return null
 
   // Fetch user stats
-  const { data: stats } = await supabase
+  let { data: stats } = await supabase
     .from('user_stats')
     .select('*')
     .eq('user_id', user.id)
-    .single() as any
+    .maybeSingle() as any
+
+  // Auto-create user stats if they don't exist
+  if (!stats) {
+    const { data: newStats } = await (supabase
+      .from('user_stats')
+      .insert as any)({
+        user_id: user.id,
+        total_xp: 0,
+        level: 1,
+        current_streak: 0,
+        longest_streak: 0,
+        last_study_date: null,
+      })
+      .select()
+      .single()
+    stats = newStats
+  }
 
   // Fetch all subjects
   const { data: subjects } = await supabase

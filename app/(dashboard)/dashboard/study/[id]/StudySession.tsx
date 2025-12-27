@@ -42,6 +42,7 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
   const [correctCount, setCorrectCount] = useState(0)
   const [reviewedCards, setReviewedCards] = useState<Array<{ id: string; correct: boolean }>>([])
   const [isComplete, setIsComplete] = useState(false)
+  const [startTime] = useState(Date.now())
 
   const currentCard = cards[currentIndex]
   const progress = ((currentIndex) / cards.length) * 100
@@ -112,7 +113,7 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
     const totalXP = baseXP + bonusXP
 
     // Save study session
-    const duration = Math.ceil(cards.length * 1.5) // Estimate: 1.5 min per card
+    const duration = Math.ceil((Date.now() - startTime) / 60000) // Actual time in minutes
     const today = new Date().toISOString().split('T')[0]
 
     await (supabase.from('study_sessions').insert as any)({
@@ -130,7 +131,7 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
       .from('user_stats')
       .select('*')
       .eq('user_id', userId)
-      .single() as any
+      .maybeSingle() as any
 
     if (stats) {
       const newXP = stats.total_xp + totalXP
@@ -170,6 +171,18 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
           last_study_date: today,
         })
         .eq('user_id', userId)
+    } else {
+      // Create initial stats
+      await (supabase
+        .from('user_stats')
+        .insert as any)({
+          user_id: userId,
+          total_xp: totalXP,
+          level: Math.floor(totalXP / 100) + 1,
+          current_streak: 1,
+          longest_streak: 1,
+          last_study_date: today,
+        })
     }
 
     // Update daily goal
