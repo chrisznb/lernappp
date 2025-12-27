@@ -34,13 +34,13 @@ export default function MobileNav() {
         <SheetHeader>
           <SheetTitle className="text-left">StudyFlow</SheetTitle>
         </SheetHeader>
-        <nav className="flex flex-col gap-4 mt-6">
+        <nav className="flex flex-col gap-4 mt-6 pl-2">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-base font-medium transition-colors hover:text-primary py-2 ${
                 pathname === link.href
                   ? 'text-primary'
                   : 'text-muted-foreground'
