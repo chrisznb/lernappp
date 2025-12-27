@@ -12,6 +12,9 @@ export default async function SubjectsPage() {
 
   if (!user) return null
 
+  // Check if user is admin
+  const isAdmin = user.email === 'christian@zaunbrecher.com'
+
   // Fetch all subjects
   const { data: subjects } = await supabase
     .from('subjects')
@@ -113,11 +116,13 @@ export default async function SubjectsPage() {
                       Learn
                     </Button>
                   </Link>
-                  <Link href={`/dashboard/subjects/${subject.id}/manage`} className="flex-1">
-                    <Button className="w-full" variant="outline" size="sm">
-                      Manage
-                    </Button>
-                  </Link>
+                  {isAdmin && (
+                    <Link href={`/dashboard/subjects/${subject.id}/manage`} className="flex-1">
+                      <Button className="w-full" variant="outline" size="sm">
+                        Manage
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </CardContent>
             </Card>

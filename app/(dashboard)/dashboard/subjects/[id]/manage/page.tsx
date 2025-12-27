@@ -17,6 +17,11 @@ export default async function ManageCardsPage({
     redirect('/login')
   }
 
+  // Only allow admin to manage cards
+  if (user.email !== 'christian@zaunbrecher.com') {
+    redirect('/dashboard/subjects')
+  }
+
   // Fetch subject
   const { data: subject } = await supabase
     .from('subjects')
