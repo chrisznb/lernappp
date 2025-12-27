@@ -1,6 +1,6 @@
 {
-  "name": "StudyFlow - Intelligent Flashcard Learning",
-  "short_name": "StudyFlow",
+  "name": "LernApp - Intelligent Flashcard Learning",
+  "short_name": "LernApp",
   "description": "Master your university exams with intelligent spaced repetition",
   "start_url": "/",
   "display": "standalone",

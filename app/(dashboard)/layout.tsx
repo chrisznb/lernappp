@@ -33,7 +33,7 @@ export default async function DashboardLayout({
             <div className="flex items-center space-x-4">
               <MobileNav />
               <Link href="/dashboard" className="text-xl font-bold">
-                StudyFlow
+                LernApp
               </Link>
               <div className="hidden md:flex space-x-4">
                 <Link

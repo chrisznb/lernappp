@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StudyFlow - Intelligent Flashcard Learning",
+  title: "LernApp - Intelligent Flashcard Learning",
   description: "Master your university exams with intelligent spaced repetition",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "StudyFlow",
+    title: "LernApp",
   },
   icons: {
     icon: "/favicon.png",

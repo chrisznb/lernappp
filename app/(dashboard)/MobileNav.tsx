@@ -32,7 +32,7 @@ export default function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-64">
         <SheetHeader>
-          <SheetTitle className="text-left">StudyFlow</SheetTitle>
+          <SheetTitle className="text-left">LernApp</SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col gap-4 mt-6 pl-2">
           {links.map((link) => (
