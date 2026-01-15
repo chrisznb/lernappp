@@ -31,28 +31,48 @@ interface StudySessionProps {
   userId: string
 }
 
-export default function StudySession({ subject, cards, userId }: StudySessionProps) {
+export default function StudySession({ subject, cards: initialCards, userId }: StudySessionProps) {
   const router = useRouter()
   const supabase = createClient()
 
+  const [cards, setCards] = useState(initialCards)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
   const [correctCount, setCorrectCount] = useState(0)
-  const [reviewedCards, setReviewedCards] = useState<Array<{ id: string; correct: boolean }>>([])
+  const [reviewedCards, setReviewedCards] = useState<Array<{ id: string; correct: boolean; shouldRepeat?: boolean }>>([])
   const [isComplete, setIsComplete] = useState(false)
   const [startTime] = useState(Date.now())
+  const [totalCardsReviewed, setTotalCardsReviewed] = useState(0)
 
   const currentCard = cards[currentIndex]
   const progress = ((currentIndex) / cards.length) * 100
   const cardsLeft = cards.length - currentIndex
 
   const handleAnswer = async (isCorrect: boolean, confidence?: 'easy' | 'good' | 'hard') => {
-    // Track this card
-    setReviewedCards([...reviewedCards, { id: currentCard.id, correct: isCorrect }])
+    setTotalCardsReviewed(totalCardsReviewed + 1)
 
-    if (isCorrect) {
+    if (!isCorrect) {
+      // User wants to repeat this card - add it back to the deck
+      const newCards = [...cards]
+
+      // Insert the card at a random position between 2-6 cards ahead
+      const minDistance = Math.min(2, cards.length - currentIndex - 1)
+      const maxDistance = Math.min(6, cards.length - currentIndex - 1)
+
+      if (maxDistance > 0) {
+        const randomDistance = Math.floor(Math.random() * (maxDistance - minDistance + 1)) + minDistance
+        const insertPosition = currentIndex + 1 + randomDistance
+        newCards.splice(insertPosition, 0, currentCard)
+        setCards(newCards)
+      }
+
+      // Track that this card needs to be repeated
+      setReviewedCards([...reviewedCards, { id: currentCard.id, correct: false, shouldRepeat: true }])
+    } else {
+      // Card was answered correctly
+      setReviewedCards([...reviewedCards, { id: currentCard.id, correct: true }])
       setCorrectCount(correctCount + 1)
     }
 
@@ -107,8 +127,8 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
   const completeSession = async () => {
     setIsComplete(true)
 
-    // Calculate XP (2 XP per card, bonus for correct answers)
-    const baseXP = cards.length * 2
+    // Calculate XP (2 XP per card reviewed, bonus for correct answers)
+    const baseXP = totalCardsReviewed * 2
     const bonusXP = correctCount * 3
     const totalXP = baseXP + bonusXP
 
@@ -121,7 +141,7 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
       subject_id: subject.id,
       session_date: today,
       duration_minutes: duration,
-      cards_reviewed: cards.length,
+      cards_reviewed: totalCardsReviewed,
       cards_correct: correctCount,
       xp_earned: totalXP,
     })
@@ -210,15 +230,22 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
     const isCorrect = selectedOption === currentCard.correct_option
     setShowAnswer(true)
 
-    // Auto-advance after 2 seconds
-    setTimeout(() => {
-      handleAnswer(isCorrect)
-    }, 2000)
+    if (!isCorrect) {
+      // If wrong, show for a moment then add back to deck
+      setTimeout(() => {
+        handleAnswer(false)
+      }, 1500)
+    } else {
+      // If correct, auto-advance after showing result
+      setTimeout(() => {
+        handleAnswer(true, 'easy')
+      }, 1500)
+    }
   }
 
   if (isComplete) {
-    const accuracy = cards.length > 0 ? Math.round((correctCount / cards.length) * 100) : 0
-    const xpEarned = cards.length * 2 + correctCount * 3
+    const accuracy = totalCardsReviewed > 0 ? Math.round((correctCount / totalCardsReviewed) * 100) : 0
+    const xpEarned = totalCardsReviewed * 2 + correctCount * 3
 
     return (
       <div className="max-w-4xl mx-auto">
@@ -230,22 +257,22 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
           <CardContent className="space-y-6">
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-muted rounded-lg p-4">
-                <div className="text-3xl font-bold">{cards.length}</div>
-                <div className="text-sm text-muted-foreground">Cards</div>
+                <div className="text-3xl font-bold">{totalCardsReviewed}</div>
+                <div className="text-sm text-muted-foreground">Karten beantwortet</div>
               </div>
               <div className="bg-muted rounded-lg p-4">
                 <div className="text-3xl font-bold text-green-600">{correctCount}</div>
-                <div className="text-sm text-muted-foreground">Correct</div>
+                <div className="text-sm text-muted-foreground">Richtig</div>
               </div>
               <div className="bg-muted rounded-lg p-4">
                 <div className="text-3xl font-bold">{accuracy}%</div>
-                <div className="text-sm text-muted-foreground">Accuracy</div>
+                <div className="text-sm text-muted-foreground">Genauigkeit</div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6">
               <div className="text-4xl font-bold text-primary">+{xpEarned} XP</div>
-              <div className="text-sm text-muted-foreground mt-1">Earned</div>
+              <div className="text-sm text-muted-foreground mt-1">Verdient</div>
             </div>
 
             <div className="flex gap-4 justify-center">
