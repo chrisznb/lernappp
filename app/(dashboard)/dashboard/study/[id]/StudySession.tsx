@@ -295,10 +295,24 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
           {/* Basic Card Type */}
           {currentCard.card_type === 'basic' && (
             <>
-              <div className="bg-muted/50 rounded-lg p-8 min-h-[200px] flex items-center justify-center">
-                <p className="text-xl text-center whitespace-pre-wrap">
-                  {isFlipped ? currentCard.back : currentCard.front}
-                </p>
+              <div className="bg-muted/50 rounded-lg p-8 min-h-[200px] flex flex-col items-center justify-center gap-4">
+                {!isFlipped ? (
+                  <p className="text-xl text-center whitespace-pre-wrap">
+                    {currentCard.front}
+                  </p>
+                ) : (
+                  <>
+                    <div className="text-center">
+                      <p className="text-sm text-muted-foreground mb-2">Frage:</p>
+                      <p className="text-lg whitespace-pre-wrap">{currentCard.front}</p>
+                    </div>
+                    <div className="w-full border-t border-border my-2"></div>
+                    <div className="text-center">
+                      <p className="text-sm text-muted-foreground mb-2">Antwort:</p>
+                      <p className="text-xl font-semibold whitespace-pre-wrap">{currentCard.back}</p>
+                    </div>
+                  </>
+                )}
               </div>
 
               {!isFlipped ? (
@@ -310,41 +324,23 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
                   Antwort zeigen
                 </Button>
               ) : (
-                <div className="space-y-3">
+                <div className="grid grid-cols-2 gap-3">
                   <Button
                     onClick={() => handleAnswer(false)}
                     variant="outline"
                     size="lg"
-                    className="w-full border-red-200 hover:bg-red-50"
+                    className="border-orange-200 hover:bg-orange-50"
                   >
-                    ❌ Didn't know
+                    🔁 Nochmal wiederholen
                   </Button>
-                  <div className="grid grid-cols-3 gap-3">
-                    <Button
-                      onClick={() => handleAnswer(true, 'hard')}
-                      variant="outline"
-                      size="lg"
-                      className="border-yellow-200 hover:bg-yellow-50"
-                    >
-                      😰 Hard
-                    </Button>
-                    <Button
-                      onClick={() => handleAnswer(true, 'good')}
-                      variant="outline"
-                      size="lg"
-                      className="border-blue-200 hover:bg-blue-50"
-                    >
-                      👍 Good
-                    </Button>
-                    <Button
-                      onClick={() => handleAnswer(true, 'easy')}
-                      variant="outline"
-                      size="lg"
-                      className="border-green-200 hover:bg-green-50"
-                    >
-                      ✅ Easy
-                    </Button>
-                  </div>
+                  <Button
+                    onClick={() => handleAnswer(true, 'easy')}
+                    variant="outline"
+                    size="lg"
+                    className="border-green-200 hover:bg-green-50"
+                  >
+                    ✅ Das war easy
+                  </Button>
                 </div>
               )}
             </>
@@ -423,21 +419,24 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
           {/* Cloze (Fill in the blank) Type */}
           {currentCard.card_type === 'cloze' && (
             <>
-              <div className="bg-muted/50 rounded-lg p-8 min-h-[200px] flex items-center justify-center">
-                <p className="text-xl text-center whitespace-pre-wrap">
-                  {isFlipped ? (
-                    <>
-                      <span className="text-muted-foreground">{currentCard.front}</span>
-                      <br />
-                      <br />
-                      <span className="font-bold text-primary">
-                        Antwort: {currentCard.back}
-                      </span>
-                    </>
-                  ) : (
-                    currentCard.front
-                  )}
-                </p>
+              <div className="bg-muted/50 rounded-lg p-8 min-h-[200px] flex flex-col items-center justify-center gap-4">
+                {!isFlipped ? (
+                  <p className="text-xl text-center whitespace-pre-wrap">
+                    {currentCard.front}
+                  </p>
+                ) : (
+                  <>
+                    <div className="text-center">
+                      <p className="text-sm text-muted-foreground mb-2">Frage:</p>
+                      <p className="text-lg whitespace-pre-wrap">{currentCard.front}</p>
+                    </div>
+                    <div className="w-full border-t border-border my-2"></div>
+                    <div className="text-center">
+                      <p className="text-sm text-muted-foreground mb-2">Antwort:</p>
+                      <p className="text-xl font-semibold whitespace-pre-wrap">{currentCard.back}</p>
+                    </div>
+                  </>
+                )}
               </div>
 
               {!isFlipped ? (
@@ -449,41 +448,23 @@ export default function StudySession({ subject, cards, userId }: StudySessionPro
                   Lösung zeigen
                 </Button>
               ) : (
-                <div className="space-y-3">
+                <div className="grid grid-cols-2 gap-3">
                   <Button
                     onClick={() => handleAnswer(false)}
                     variant="outline"
                     size="lg"
-                    className="w-full border-red-200 hover:bg-red-50"
+                    className="border-orange-200 hover:bg-orange-50"
                   >
-                    ❌ Wrong
+                    🔁 Nochmal wiederholen
                   </Button>
-                  <div className="grid grid-cols-3 gap-3">
-                    <Button
-                      onClick={() => handleAnswer(true, 'hard')}
-                      variant="outline"
-                      size="lg"
-                      className="border-yellow-200 hover:bg-yellow-50"
-                    >
-                      😰 Hard
-                    </Button>
-                    <Button
-                      onClick={() => handleAnswer(true, 'good')}
-                      variant="outline"
-                      size="lg"
-                      className="border-blue-200 hover:bg-blue-50"
-                    >
-                      👍 Good
-                    </Button>
-                    <Button
-                      onClick={() => handleAnswer(true, 'easy')}
-                      variant="outline"
-                      size="lg"
-                      className="border-green-200 hover:bg-green-50"
-                    >
-                      ✅ Easy
-                    </Button>
-                  </div>
+                  <Button
+                    onClick={() => handleAnswer(true, 'easy')}
+                    variant="outline"
+                    size="lg"
+                    className="border-green-200 hover:bg-green-50"
+                  >
+                    ✅ Das war easy
+                  </Button>
                 </div>
               )}
             </>
