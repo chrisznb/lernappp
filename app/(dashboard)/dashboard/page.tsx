@@ -36,10 +36,11 @@ export default async function DashboardPage() {
     stats = newStats
   }
 
-  // Fetch all subjects
+  // Fetch user's subjects (RLS ensures only their own)
   const { data: subjects } = await supabase
     .from('subjects')
     .select('*')
+    .eq('user_id', user.id)
     .order('exam_date', { ascending: true }) as any
 
   // Fetch today's goal
@@ -180,56 +181,80 @@ export default async function DashboardPage() {
       </div>
 
       {/* Quick Actions */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Tägliches Ziel</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm">
-              <span>Karten</span>
-              <span>
-                {todayGoal?.completed_cards || 0} / {todayGoal?.target_cards || 50}
-              </span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Tägliches Ziel</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span>Karten</span>
+                <span>
+                  {todayGoal?.completed_cards || 0} / {todayGoal?.target_cards || 50}
+                </span>
+              </div>
+              <div className="w-full bg-secondary h-2 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary transition-all"
+                  style={{
+                    width: `${Math.min(
+                      ((todayGoal?.completed_cards || 0) /
+                        (todayGoal?.target_cards || 50)) *
+                        100,
+                      100
+                    )}%`,
+                  }}
+                />
+              </div>
             </div>
-            <div className="w-full bg-secondary h-2 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-primary transition-all"
-                style={{
-                  width: `${Math.min(
-                    ((todayGoal?.completed_cards || 0) /
-                      (todayGoal?.target_cards || 50)) *
-                      100,
-                    100
-                  )}%`,
-                }}
-              />
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span>Minuten</span>
+                <span>
+                  {todayGoal?.completed_minutes || 0} /{' '}
+                  {todayGoal?.target_minutes || 120}
+                </span>
+              </div>
+              <div className="w-full bg-secondary h-2 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary transition-all"
+                  style={{
+                    width: `${Math.min(
+                      ((todayGoal?.completed_minutes || 0) /
+                        (todayGoal?.target_minutes || 120)) *
+                        100,
+                      100
+                    )}%`,
+                  }}
+                />
+              </div>
             </div>
-          </div>
-          <div className="space-y-2">
-            <div className="flex justify-between text-sm">
-              <span>Minuten</span>
-              <span>
-                {todayGoal?.completed_minutes || 0} /{' '}
-                {todayGoal?.target_minutes || 120}
-              </span>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Prüfungsmodus</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-4xl">📝</span>
+              <div>
+                <p className="font-medium">20 Zufällige Fragen</p>
+                <p className="text-sm text-muted-foreground">
+                  Teste dein Wissen aus allen Fächern
+                </p>
+              </div>
             </div>
-            <div className="w-full bg-secondary h-2 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-primary transition-all"
-                style={{
-                  width: `${Math.min(
-                    ((todayGoal?.completed_minutes || 0) /
-                      (todayGoal?.target_minutes || 120)) *
-                      100,
-                    100
-                  )}%`,
-                }}
-              />
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+            <Link href="/dashboard/exam">
+              <Button className="w-full" size="lg">
+                Prüfung starten
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

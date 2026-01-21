@@ -17,16 +17,12 @@ export default async function ManageCardsPage({
     redirect('/login')
   }
 
-  // Only allow admin to manage cards
-  if (user.email !== 'christian@zaunbrecher.com') {
-    redirect('/dashboard/subjects')
-  }
-
-  // Fetch subject
+  // Fetch subject (RLS ensures user can only access their own subjects)
   const { data: subject } = await supabase
     .from('subjects')
     .select('*')
     .eq('id', id)
+    .eq('user_id', user.id)
     .single()
 
   if (!subject) {
