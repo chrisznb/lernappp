@@ -50,20 +50,25 @@ export default function ExamPage() {
       .select('id, front, options, correct_option, subject_id')
       .eq('user_id', user.id)
       .eq('card_type', 'multiple_choice')
-      .order('id', { ascending: false }) // Random order via different approach
+      .order('id', { ascending: false })
 
     if (error) {
       console.error('Error loading questions:', error)
+      setLoading(false)
       return
     }
 
-    if (cards) {
+    if (cards && cards.length > 0) {
       // Shuffle und nimm die ersten 20
-      const shuffled = cards.sort(() => Math.random() - 0.5).slice(0, 20)
-      setQuestions(shuffled.map(card => ({
-        ...card,
-        options: JSON.parse(card.options as string)
-      })))
+      const shuffled = [...cards].sort(() => Math.random() - 0.5).slice(0, 20)
+      const parsedQuestions: Question[] = shuffled.map((card: any) => ({
+        id: card.id,
+        front: card.front,
+        subject_id: card.subject_id,
+        correct_option: card.correct_option,
+        options: JSON.parse(card.options)
+      }))
+      setQuestions(parsedQuestions)
     }
 
     setLoading(false)
