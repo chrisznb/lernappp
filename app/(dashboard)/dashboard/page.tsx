@@ -169,7 +169,11 @@ export default async function DashboardPage() {
                     >
                       {daysLeft} Tage
                     </Badge>
-                    <Link href={`/dashboard/study/${subject.id}`}>
+                    <Link href={
+                      subject.id === 'f1c31287-e2d3-4981-ae57-717a34d7551c'
+                        ? `/dashboard/hr-overview/${subject.id}`
+                        : `/dashboard/study/${subject.id}`
+                    }>
                       <Button size="sm">Lernen</Button>
                     </Link>
                   </div>
