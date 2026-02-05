@@ -1,0 +1,200 @@
+- Koordination schwierig',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Divisional Organization: Wann einsetzen?',
+'**Wann Divisional Organization?**
+
+Geeignet für:
+✓ Multi-Product-Unternehmen
+✓ Verschiedene Märkte/Regionen
+✓ Unterschiedliche Kundensegmente
+✓ Autonomie der Einheiten wichtig
+✓ Beispiel aus Exam: "International consumer goods - regions should have key decision-making power"
+✓ Beispiel aus Exam: "Insurance with corporate/private customers that have little in common"
+
+Nicht geeignet für:
+✗ Single-Product-Unternehmen
+✗ Synergien zwischen Bereichen wichtig
+✗ Begrenzte Ressourcen',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Matrix Organization: Definition und Merkmale',
+'**Matrix Organization**
+
+Definition:
+- Kombination aus funktionaler und divisionaler Struktur
+- Mitarbeiter haben zwei Chefs (dual reporting)
+
+Vorteile:
+- Flexibel
+- Gute Ressourcennutzung
+- Fördert Kommunikation
+- Sowohl Spezialisierung als auch Produktfokus
+
+Nachteile:
+- Komplexität und Verwirrung
+- Konflikte zwischen Managern
+- Langsame Entscheidungen
+- Hoher Koordinationsaufwand
+- Verletzung des "Unity of Command" Prinzips',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Matrix Organization: Wann einsetzen?',
+'**Wann Matrix Organization?**
+
+Geeignet für:
+✓ Komplexe Projekte
+✓ Temporäre Teams
+✓ Sowohl funktionale Expertise als auch Produktfokus nötig
+✓ Flexible Ressourcenallokation erforderlich
+✓ Projektmanagement wichtig
+
+Nicht geeignet für:
+✗ Klare Hierarchie gewünscht
+✗ Einfache Organisationen
+✗ Mitarbeiter brauchen klare Anweisungen
+✗ Konfliktscheue Kultur',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Consumer Goods + Dietary Supplements: Welcher Archetype nach Akquisition?',
+'**Exam Case: Consumer Goods Company**
+
+Situation:
+- Consumer Goods Company (Home Care + Body Care)
+- Akquiriert: Dietary Supplements Producer
+- Alte Struktur: Functional (Procurement, Production, Marketing & Sales)
+
+Empfohlener neuer Archetype: **DIVISIONAL**
+
+Begründung PRO:
+"Die drei Produktkategorien (Home Care, Body Care, Dietary Supplements) haben unterschiedliche Kunden, Vertriebskanäle und Anforderungen. Eine divisionale Struktur ermöglicht produktspezifisches Marketing und spezialisierte Vertriebsstrategien."
+
+Begründung CONTRA:
+"Duplikation von Funktionen wie Marketing und Vertrieb führt zu höheren Kosten und verliert Synergien in Einkauf und Produktion, die bei der funktionalen Struktur genutzt wurden."',
+ARRAY['organization', 'archetypes', 'hr', 'exam', 'case-study']);
+
+-- Multiple Choice: Organization
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Ein internationaler Konsumgüterhersteller will, dass Regionen die zentrale Entscheidungsmacht haben. Welcher Archetype?',
+'["Divisional", "Functional", "Matrix", "Network"]',
+0,
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Ein Automobilhersteller will Synergien in Einkauf, Produktion und Vertrieb nutzen. Welcher Archetype?',
+'["Functional", "Divisional", "Matrix", "Holding"]',
+0,
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Was ist ein NACHTEIL der Divisional Organization?',
+'["Duplikation von Ressourcen und höhere Kosten", "Zu wenig Produktfokus", "Schlechte Spezialisierung", "Zu hierarchisch"]',
+0,
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+-- ============================================
+-- HIGH PRIORITY: Gender Equality (Ammerman & Groysberg 2021)
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg: Die 7 Talent Management Processes (Übersicht)',
+'**7 Talent Management Processes für Gender Equality**
+
+1. **Hiring** - Rekrutierung
+2. **Performance Evaluation** - Leistungsbeurteilung
+3. **Compensation** - Vergütung
+4. **Promotion** - Beförderung
+5. **Sponsorship** - Förderung/Mentoring
+6. **Talent Development** - Talententwicklung
+7. **Retention** - Mitarbeiterbindung
+
+Jeder Prozess hat:
+- Core Problem (Kernproblem)
+- Key Question (zentrale Frage)
+- Measures (Maßnahmen)',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #1: HIRING',
+'**1. HIRING (Rekrutierung)**
+
+Core Problem:
+"Are we fishing in the same pond as everyone else?"
+- Zu enger Rekrutierungspool
+- Unconscious Bias in Stellenbeschreibungen
+- Immer die gleichen Unis/Kanäle
+
+Measures:
+✓ Stellenanzeigen gender-neutral formulieren
+✓ Diverse Rekrutierungskanäle nutzen (nicht nur Elite-Unis)
+✓ Strukturierte Interviews statt Bauchgefühl
+✓ Diverse Interview-Panels einsetzen
+✓ Blind-Recruiting (CVs ohne Namen/Foto)
+✓ Job Requirements kritisch prüfen (sind 10 Jahre Erfahrung wirklich nötig?)',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'recruiting']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #2: PERFORMANCE EVALUATION',
+'**2. PERFORMANCE EVALUATION (Leistungsbeurteilung)**
+
+Core Problem:
+"Are our evaluations truly objective?"
+- Unconscious Bias (z.B. Frauen als "bossy", Männer als "leader")
+- Unterschiedliche Standards für Männer/Frauen
+- Halo Effect
+
+Measures:
+✓ Klare, messbare Performance-Kriterien
+✓ 360-Grad-Feedback
+✓ Kalibrierungs-Meetings (Manager vergleichen Bewertungen)
+✓ Bias-Training für Manager
+✓ Feedback auf Verhalten fokussieren, nicht auf Persönlichkeit
+✓ Dokumentation von Beispielen',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'performance']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #3: COMPENSATION',
+'**3. COMPENSATION (Vergütung)**
+
+Core Problem:
+"Are we paying fairly?"
+- Gender Pay Gap
+- Frauen verhandeln weniger/anders
+- Intransparente Gehälter
+
+Measures:
+✓ Regelmäßige Pay Equity Audits durchführen
+✓ Gehaltstransparenz erhöhen
+✓ Klare Gehaltsbänder für Positionen
+✓ Objektive Kriterien für Boni
+✓ Nicht nach bisherigem Gehalt fragen (perpetuiert Ungleichheit)
+✓ Proaktiv faire Gehälter anbieten statt auf Verhandlung warten',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'compensation']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #4: PROMOTION',
+'**4. PROMOTION (Beförderung)**
+
+Core Problem:
+"Are we promoting based on potential or track record?"
+- Männer werden auf Potenzial befördert, Frauen auf Track Record
+- "Prove it again" Bias
+- Weniger Sichtbarkeit für Frauen
+
+Measures:

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Dieser Import würde normalerweise die Cards in die Datenbank einfügen."
+echo "Da wir Supabase MCP verwenden, müssen die Cards über das MCP Tool eingefügt werden."
+echo ""
+echo "Bitte führe die SQL-Datei scripts/import-hr-exam-cards.sql manuell aus,"
+echo "oder verwende das Supabase Dashboard, um die Cards zu importieren."
+echo ""
+echo "Die SQL-Datei enthält 70 INSERT Statements für HR Exam Cards."
+echo ""
+echo "Alternativ: Verwende Supabase SQL Editor im Dashboard:"
+echo "1. Öffne https://supabase.com/dashboard/project/[PROJECT_ID]/sql"
+echo "2. Kopiere den Inhalt von scripts/import-hr-exam-cards.sql"
+echo "3. Führe das SQL aus"
+echo ""
+echo "Die Cards wurden bereits vorbereitet und sind bereit zum Import!"

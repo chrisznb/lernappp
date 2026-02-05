@@ -1,0 +1,200 @@
+-- HR Exam Preparation Cards
+-- User: christian@zaunbrecher.com
+-- Subject: Human Resources and Organisation
+
+-- ============================================
+-- HIGH PRIORITY: Kotter's 8 Change Management Steps
+-- ============================================
+
+-- Flashcards: Kotter's Steps
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 1: Name und Beschreibung',
+'**Create a Sense of Urgency**
+
+Beschreibung:
+- Dringlichkeit für Veränderung schaffen
+- Notwendigkeit des Wandels kommunizieren
+- Status Quo hinterfragen
+
+Praktisches Beispiel (Call Center → Open Office):
+"Zeigen Sie Zahlen: Moderne Unternehmen haben 30% höhere Produktivität mit Open Office. Konkurrenten haben bereits umgestellt."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 2: Name und Beschreibung',
+'**Build a Guiding Coalition**
+
+Beschreibung:
+- Führungskoalition aufbauen
+- Einflussreiche Personen für das Change-Projekt gewinnen
+- Team aus verschiedenen Bereichen/Hierarchien
+
+Praktisches Beispiel (Call Center → Open Office):
+"Gewinnen Sie 2-3 Team Leader, die von Open Office überzeugt sind, und bilden Sie mit ihnen die Change-Gruppe."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 3: Name und Beschreibung',
+'**Form a Strategic Vision**
+
+Beschreibung:
+- Klare Vision für die Zukunft entwickeln
+- Strategie zur Erreichung der Vision
+- Vision muss verständlich und motivierend sein
+
+Praktisches Beispiel (Call Center → Open Office):
+"Vision: ''Modernes, kollaboratives Arbeitsumfeld, das Innovation fördert und Teamarbeit erleichtert. Ziel: Bessere Zusammenarbeit zwischen Teams.''"',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 4: Name und Beschreibung',
+'**Enlist a Volunteer Army / Communicate the Vision**
+
+Beschreibung:
+- Vision wiederholt und klar kommunizieren
+- Alle verfügbaren Kommunikationskanäle nutzen
+- Vorbild sein (walk the talk)
+
+Praktisches Beispiel (Call Center → Open Office):
+"Kommunizieren Sie die Vision in Team-Meetings, per E-Mail, am schwarzen Brett. Zeigen Sie Mock-ups des neuen Büros. Führen Sie Q&A Sessions durch."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 5: Name und Beschreibung',
+'**Enable Action by Removing Barriers**
+
+Beschreibung:
+- Hindernisse für die Veränderung beseitigen
+- Systeme/Strukturen anpassen
+- Widerstände adressieren
+
+Praktisches Beispiel (Call Center → Open Office):
+"Sorgen Sie für: Noise-Cancelling-Headsets, Fokusräume für konzentriertes Arbeiten, höhenverstellbare Schreibtische. Schulen Sie Mitarbeiter in neuen Collaboration-Tools."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 6: Name und Beschreibung',
+'**Generate Short-Term Wins**
+
+Beschreibung:
+- Schnelle Erfolge planen und feiern
+- Frühzeitige Erfolge sichtbar machen
+- Motivation aufrechterhalten
+
+Praktisches Beispiel (Call Center → Open Office):
+"Nach 1 Monat: Feiern Sie die erste erfolgreiche Team-Kollaboration im neuen Raum. Teilen Sie positive Feedback-Zitate von Mitarbeitern. Zeigen Sie erste Produktivitätssteigerungen."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 7: Name und Beschreibung',
+'**Sustain Acceleration / Consolidate Gains**
+
+Beschreibung:
+- Erfolge nutzen, um weitere Veränderungen anzustoßen
+- Nicht zu früh aufhören
+- Kontinuierliche Verbesserung
+
+Praktisches Beispiel (Call Center → Open Office):
+"Nach erstem Erfolg: Führen Sie weitere Verbesserungen ein (z.B. flexible Arbeitszeiten, Hot-Desking). Nutzen Sie die positive Stimmung für weitere Optimierungen."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kotter Step 8: Name und Beschreibung',
+'**Institute Change / Anchor in Culture**
+
+Beschreibung:
+- Veränderungen in der Unternehmenskultur verankern
+- Neue Verhaltensweisen zur Norm machen
+- Verbindung zwischen neuem Verhalten und Erfolg zeigen
+
+Praktisches Beispiel (Call Center → Open Office):
+"Nach 3 Monaten: Machen Sie Open Office zum ''New Normal''. Integrieren Sie kollaboratives Arbeiten in Onboarding. Erzählen Sie Erfolgsgeschichten bei neuen Projekten."',
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+-- Multiple Choice: Kotter
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'In welchem Schritt von Kotter''s Change Management werden schnelle Erfolge gefeiert?',
+'["Step 6: Generate Short-Term Wins", "Step 3: Form a Strategic Vision", "Step 5: Enable Action by Removing Barriers", "Step 8: Institute Change"]',
+0,
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Was ist der ERSTE Schritt in Kotter''s 8-Step Change Model?',
+'["Create a Sense of Urgency", "Build a Guiding Coalition", "Form a Strategic Vision", "Communicate the Vision"]',
+0,
+ARRAY['change-management', 'kotter', 'hr', 'exam']);
+
+-- ============================================
+-- HIGH PRIORITY: Organization Archetypes
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Functional Organization: Definition und Merkmale',
+'**Functional Organization**
+
+Definition:
+- Gliederung nach betrieblichen Funktionen
+- Departments: Marketing, Finance, Production, HR, etc.
+
+Vorteile:
+- Hohe Spezialisierung und Expertise
+- Economies of Scale
+- Klare Karrierepfade innerhalb der Funktion
+- Effiziente Ressourcennutzung
+
+Nachteile:
+- Silodenken (Functional Silos)
+- Langsame Entscheidungsprozesse
+- Schlechte Koordination zwischen Funktionen
+- Fokus auf Funktion statt auf Produkt/Kunde',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Functional Organization: Wann einsetzen?',
+'**Wann Functional Organization?**
+
+Geeignet für:
+✓ Single-Product-Unternehmen
+✓ Traditionelle Unternehmen mit klarem Fokus
+✓ Stabilität und Effizienz wichtiger als Flexibilität
+✓ Hohe Spezialisierung erforderlich
+✓ Beispiel aus Exam: "Windshield wiper business - other products hardly play a role"
+
+Nicht geeignet für:
+✗ Multi-Product-Unternehmen
+✗ Verschiedene Märkte/Regionen
+✗ Schnelle Anpassung erforderlich',
+ARRAY['organization', 'archetypes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Divisional Organization: Definition und Merkmale',
+'**Divisional Organization**
+
+Definition:
+- Gliederung nach Produkten, Regionen, Kunden oder Märkten
+- Jede Division ist quasi ein "Mini-Unternehmen"
+
+Vorteile:
+- Klare Produkt-/Marktzuständigkeit
+- Schnelle Entscheidungen
+- Fokus auf Kunden/Markt
+- Flexibilität und Anpassungsfähigkeit
+- Klare P&L Verantwortung
+
+Nachteile:
+- Duplikation von Ressourcen (teuer!)
+- Keine Economies of Scale
+- Konkurrenz zwischen Divisionen

@@ -1,0 +1,200 @@
+→ Soziale Kontakte sind wichtig für Networking',
+ARRAY['motivation', 'reiss-profile', 'hr', 'exam', 'case-study']);
+
+-- ============================================
+-- Cross-Cultural Management
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Confrontation-Avoidant vs Confrontational Cultures',
+'**Confrontation-Avoidant Cultures**
+
+Characteristics:
+- Dissens und Debatte als negativ für Harmonie
+- Indirekte Kommunikation
+- "Gesicht wahren" wichtig
+- Konflikte vermeiden
+
+Beispiele: Japan, China, viele asiatische Kulturen
+
+**Confrontational Cultures**
+
+Characteristics:
+- Offene Meinungsverschiedenheit als produktiv
+- Direkte Kommunikation
+- "Devil''s Advocate"
+- Konflikte als normal
+
+Beispiele: Deutschland, Niederlande, Israel
+
+**Exam: TRUE**
+"Confrontation-avoidant cultures consider dissent and debate as negative for group harmony and personal relationships"',
+ARRAY['cross-cultural', 'communication', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Linear Time vs Flexible Time Cultures',
+'**Linear Time Cultures**
+
+Characteristics:
+- Sequentiell, eine Sache nach der anderen
+- Pünktlichkeit wichtig
+- Klare Deadlines
+- "Time is money"
+- Planung und Organisation
+
+Beispiele: Deutschland, Schweiz, USA
+
+**Flexible Time Cultures**
+
+Characteristics:
+- Multitasking normal
+- Smooth transitions zwischen Tasks
+- Flexibilität > Organisation
+- Beziehungen wichtiger als Zeitpläne
+
+Beispiele: Lateinamerika, Afrika, Arabische Länder
+
+**Exam: FALSE**
+"Time linear cultures make smooth transitions" → Das ist FLEXIBLE time!',
+ARRAY['cross-cultural', 'time', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'High-Context vs Low-Context Cultures',
+'**High-Context Cultures**
+
+Characteristics:
+- Viel implizite Kommunikation
+- Kontext und Beziehung wichtig
+- "Zwischen den Zeilen lesen"
+- Beginnen mit Theorie/Prinzipien, dann Beispiele
+
+Beispiele: Japan, Arabische Länder, China
+
+**Low-Context Cultures (Principle-Led)**
+
+Characteristics:
+- Explizite, direkte Kommunikation
+- "Say what you mean"
+- Präzise und einfach
+- Repetition OK
+- Beginnen mit Meinung/Statement, dann Theorie
+
+Beispiele: USA, Deutschland, Niederlande
+
+**Exam: FALSE**
+"High-context cultures begin with statement/opinion" → Das ist LOW-context!
+
+**Exam: TRUE**
+"Principle-led communicate precise, simple, clearly"',
+ARRAY['cross-cultural', 'communication', 'hr', 'exam']);
+
+-- Multiple Choice: Cross-Cultural
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Welches Statement über Cross-Cultural Management ist WAHR?',
+'["Confrontation-avoidant cultures sehen Dissens als negativ für Harmonie", "Linear Time Cultures sind flexibel mit Deadlines", "High-Context Cultures kommunizieren sehr direkt", "Principle-led Cultures nutzen viel implizite Kommunikation"]',
+0,
+ARRAY['cross-cultural', 'hr', 'exam']);
+
+-- ============================================
+-- Teamwork: Ringelmann Effect & Kirkpatrick
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ringelmann Effect: Definition und Maßnahmen',
+'**Ringelmann Effect (Social Loafing)**
+
+Definition:
+Je größer die Gruppe, desto weniger Effort pro Person.
+"Verstecken" in der Gruppe.
+
+**Maßnahmen dagegen:**
+
+TRUE: "Involve all team members primarily on cognitive level"
+→ Engagement erhöhen
+
+FALSE: "Ensure uniform qualification"
+→ Diversität ist gut! Nicht relevant für Social Loafing
+
+FALSE: "Set LOW performance targets"
+→ Niedrige Ziele motivieren nicht! Besser: challenging but achievable
+
+FALSE: "Obtaining works council consent"
+→ Irrelevant für Motivation
+
+Weitere Maßnahmen:
+- Individuelle Leistung messbar machen
+- Klare Rollen und Verantwortlichkeiten
+- Regelmäßiges Feedback
+- Team-Größe begrenzen',
+ARRAY['teamwork', 'ringelmann', 'social-loafing', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Kirkpatrick Model: 4 Levels of Evaluation',
+'**Kirkpatrick''s 4 Levels of Training Evaluation**
+
+**Level 1: REACTION**
+- Was denken Teilnehmer über das Training?
+- Zufriedenheit und wahrgenommene Nützlichkeit
+- Methode: Feedback-Formulare
+**TRUE: "Measures satisfaction and usefulness from learner''s POV"**
+
+**Level 2: LEARNING**
+- Was haben Teilnehmer gelernt?
+- Wissen, Skills, Attitude
+- Methode: Tests, Assessments
+**FALSE: "Shows development of behavior" → Das ist Level 3!**
+
+**Level 3: BEHAVIOR**
+- Wenden Teilnehmer das Gelernte an?
+- Transfer zum Arbeitsplatz
+- Methode: Beobachtung, 360° Feedback
+**TRUE: "Written exams inappropriate for measuring behavior"**
+
+**Level 4: RESULTS**
+- Business Impact
+- ROI, KPIs
+**TRUE: "Easily measured by numbers like quality, productivity, sales"**',
+ARRAY['training', 'kirkpatrick', 'evaluation', 'hr', 'exam']);
+
+-- Multiple Choice: Teamwork
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Welches Kirkpatrick Level misst, ob Teilnehmer das Gelernte am Arbeitsplatz anwenden?',
+'["Level 3: Behavior", "Level 1: Reaction", "Level 2: Learning", "Level 4: Results"]',
+0,
+ARRAY['training', 'kirkpatrick', 'hr', 'exam']);
+
+-- ============================================
+-- Organizational Theory
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Scientific Management (Taylor)',
+'**Scientific Management (Frederick Taylor)**
+
+Prinzipien:
+1. **Unity of Command** - Ein Mitarbeiter, ein Chef
+2. **Division of Labor** - Extreme Spezialisierung
+3. **Time and Motion Studies** - Optimale Arbeitsmethoden finden
+4. **Scientific Selection** - Right person for right job
+
+Basis:
+**Natural Sciences** (Experiment, Messung)
+TRUE: "Scientific Management is based on Natural Sciences"
+
+Ziel:
+Maximale Effizienz durch Standardisierung
+
+Kritik:
+- Menschen als Maschinen
+- Keine Motivation/Kreativität
+- Nur finanzielle Anreize
+
+**Exam:**

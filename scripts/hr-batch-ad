@@ -1,0 +1,200 @@
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Tuckman Phase 2: STORMING',
+'**STORMING (Konfliktphase)**
+
+Relationship Level:
+- Konflikte und Spannungen
+- Machtkämpfe
+- Widerstand gegen Leader und Aufgaben
+- Cliquenbildung
+- Frustration
+
+Role of Leader:
+- **Coaching und Unterstützung**
+- Konflikte managen (nicht vermeiden!)
+- Kommunikation fördern
+- Ermutigung geben
+- Durchhalten und Geduld
+
+Leadership Style (Hersey/Blanchard):
+**S2 - SELLING/COACHING**
+(High Task, High Relationship)',
+ARRAY['teamwork', 'tuckman', 'leadership', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Tuckman Phase 3: NORMING',
+'**NORMING (Regelungsphase)**
+
+Relationship Level:
+- Zusammenhalt entwickelt sich
+- Gemeinsame Normen und Regeln
+- Gegenseitige Akzeptanz
+- Kooperation
+- "Wir-Gefühl"
+
+Role of Leader:
+- **Partizipativ**
+- Entscheidungen gemeinsam treffen
+- Feedback einholen
+- Team empowern
+- Zurücknehmen
+
+Leadership Style (Hersey/Blanchard):
+**S3 - PARTICIPATING/SUPPORTING**
+(Low Task, High Relationship)',
+ARRAY['teamwork', 'tuckman', 'leadership', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Tuckman Phase 4: PERFORMING',
+'**PERFORMING (Leistungsphase)**
+
+Relationship Level:
+- Hohe Performance
+- Autonomie
+- Flexibilität
+- Gegenseitige Unterstützung
+- Stolz auf Erreichtes
+
+Role of Leader:
+- **Delegierend**
+- Team arbeitet selbstständig
+- Leader ist Facilitator
+- Strategischer Fokus
+- Minimale Intervention
+
+Leadership Style (Hersey/Blanchard):
+**S4 - DELEGATING**
+(Low Task, Low Relationship)',
+ARRAY['teamwork', 'tuckman', 'leadership', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Hersey & Blanchard: Maturity Level 1',
+'**Maturity Level 1 (M1)**
+
+Characteristics:
+- **Low Competence, High Commitment**
+- Enthusiastisch aber unerfahren
+- "Can''t but willing"
+- Anfänger mit Motivation
+
+Leadership Style:
+**S1 - TELLING/DIRECTING**
+- Klare Anweisungen
+- Enge Supervision
+- High Task, Low Relationship
+
+Beispiel:
+Neuer Mitarbeiter, erster Tag, hochmotiviert aber keine Ahnung.',
+ARRAY['leadership', 'hersey-blanchard', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Hersey & Blanchard: Maturity Level 2',
+'**Maturity Level 2 (M2)**
+
+Characteristics:
+- **Some Competence, Low Commitment**
+- Desillusioniert
+- "Can''t and unwilling"
+- Hat erste Erfahrung, aber Zweifel
+
+Leadership Style:
+**S2 - SELLING/COACHING**
+- Erklären und überzeugen
+- Viel Unterstützung
+- High Task, High Relationship
+
+Beispiel (aus Exam):
+"Nach ersten Erfolgen realisiert ein Mitarbeiter ernüchtert, dass es sehr lange dauern kann, bis er kompetent ist."',
+ARRAY['leadership', 'hersey-blanchard', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Hersey & Blanchard: Maturity Level 3',
+'**Maturity Level 3 (M3)**
+
+Characteristics:
+- **High Competence, Variable Commitment**
+- Kann es, aber unsicher ob sie/er will
+- "Can but unwilling/insecure"
+- Kompetent aber zögernd
+
+Leadership Style:
+**S3 - PARTICIPATING/SUPPORTING**
+- Gemeinsam entscheiden
+- Motivation fördern
+- Low Task, High Relationship
+
+Beispiel (aus Exam):
+"Mitarbeiterin hat exzellent für Präsentation vorbereitet, zweifelt aber in der Nacht davor an ihrer Kompetenz."',
+ARRAY['leadership', 'hersey-blanchard', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Hersey & Blanchard: Maturity Level 4',
+'**Maturity Level 4 (M4)**
+
+Characteristics:
+- **High Competence, High Commitment**
+- Kann es UND will es
+- "Can and willing"
+- Expert und motiviert
+
+Leadership Style:
+**S4 - DELEGATING**
+- Minimal supervision
+- Autonomie
+- Low Task, Low Relationship
+
+Beispiel:
+Erfahrener Experte, der selbstständig arbeitet und hochmotiviert ist.',
+ARRAY['leadership', 'hersey-blanchard', 'hr', 'exam']);
+
+-- Multiple Choice: Leadership
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'In welcher Tuckman-Phase ist der Leader am MEISTEN direktiv?',
+'["Forming", "Storming", "Norming", "Performing"]',
+0,
+ARRAY['teamwork', 'tuckman', 'leadership', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Ein Mitarbeiter ist kompetent aber unsicher. Welches Hersey & Blanchard Maturity Level?',
+'["M3 - High Competence, Variable Commitment", "M1 - Low Competence, High Commitment", "M2 - Some Competence, Low Commitment", "M4 - High Competence, High Commitment"]',
+0,
+ARRAY['leadership', 'hersey-blanchard', 'hr', 'exam']);
+
+-- ============================================
+-- Span of Control
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Span of Control: Definition und Berechnung',
+'**Span of Control**
+
+Definition:
+Anzahl der Mitarbeiter, die einem Manager direkt unterstellt sind.
+
+**Berechnung Manager-Bedarf:**
+
+Formel:
+```
+Team Leads = Agents / Span
+Department Heads = Team Leads / Span
+Total Managers = Team Leads + Department Heads
+```
+
+**Exam-Beispiel: Call Center (400 Agents)**
+
+Alt: 10 Agents/Lead, 8 Leads/Dept Head
+- Team Leads: 400/10 = 40
+- Dept Heads: 40/8 = 5
+- **Total: 45 Managers**
+
+Neu: 8 Agents/Lead, 5 Leads/Dept Head
+- Team Leads: 400/8 = 50

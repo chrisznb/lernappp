@@ -1,0 +1,138 @@
+TRUE: "Unity of command is key principle"
+FALSE: "Based on social sciences" → Natural Sciences!',
+ARRAY['organization', 'theory', 'scientific-management', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Contingency Approach',
+'**Contingency Approach**
+
+Hauptaussage:
+"It depends!" - Es gibt keine "one best way"
+Die beste Organisationsstruktur hängt vom Kontext ab.
+
+**Wichtige Context Factors:**
+1. **Size** - Größe der Organisation
+2. **Technology** - Art der Technologie/Produktion
+3. **Environment** - Stabilität/Dynamik der Umwelt
+4. **Strategy** - Unternehmensstrategie
+
+**Exam:**
+FALSE: "Size is THE MOST relevant context factor"
+→ Es gibt nicht DEN einen wichtigsten Faktor, alle sind relevant!
+
+TRUE: "Hierarchy of authority describes number of management layers"',
+ARRAY['organization', 'theory', 'contingency', 'hr', 'exam']);
+
+-- Multiple Choice: Organizational Theory
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Auf welcher Wissenschaft basiert Scientific Management?',
+'["Natural Sciences", "Social Sciences", "Economics", "Psychology"]',
+0,
+ARRAY['organization', 'theory', 'hr', 'exam']);
+
+-- ============================================
+-- Personnel Selection Mistakes
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Personnel Selection: First Order Mistake (Alpha Error)',
+'**First Order Mistake (Type I Error / Alpha Error)**
+
+Definition:
+**Einen UNGEEIGNETEN Kandidaten EINSTELLEN**
+False Positive - "We hired the wrong person"
+
+**Exam-Beispiel: Statistik-Professor FH Aachen**
+
+"Die FH Aachen stellt einen Kandidaten als Statistik-Professor ein, der zwar im Interview gut wirkte und beeindruckende Publikationen hatte, sich aber später als unfähig herausstellt, Studierenden komplexe statistische Konzepte verständlich zu vermitteln. Die Lehrevaluationen sind katastrophal."
+
+Folgen:
+- Schlechte Performance
+- Kosten (Gehalt, Training)
+- Demotivation im Team
+- Schaden für Organisation
+- Schwierig zu korrigieren (Kündigungsschutz)',
+ARRAY['recruiting', 'selection', 'mistakes', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Personnel Selection: Second Order Mistake (Beta Error)',
+'**Second Order Mistake (Type II Error / Beta Error)**
+
+Definition:
+**Einen GEEIGNETEN Kandidaten ABLEHNEN**
+False Negative - "We rejected the right person"
+
+**Exam-Beispiel: Statistik-Professor FH Aachen**
+
+"Die FH Aachen lehnt eine hervorragend qualifizierte Kandidatin für die Statistik-Professur ab, weil sie in der Präsentation nervös wirkte und keine Elite-Universität besucht hat. Sie wird später Professorin an einer renommierten Universität und gewinnt mehrere Lehrpreise. Die FH verpasst einen Star-Professor."
+
+Folgen:
+- Verlorenes Talent (geht zur Konkurrenz!)
+- Opportunity Costs
+- Position muss neu besetzt werden (Zeit, Kosten)
+- Weniger offensichtlich als First Order Mistake
+- "Was wäre gewesen?"',
+ARRAY['recruiting', 'selection', 'mistakes', 'hr', 'exam']);
+
+-- Multiple Choice: Selection Mistakes
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Was ist ein First Order Mistake in Personnel Selection?',
+'["Einen ungeeigneten Kandidaten einstellen", "Einen geeigneten Kandidaten ablehnen", "Zu lange mit der Entscheidung warten", "Zu wenig Gehalt anbieten"]',
+0,
+ARRAY['recruiting', 'selection', 'hr', 'exam']);
+
+-- ============================================
+-- Employer Branding (Exam Task 8)
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Employer Branding Funnel',
+'**Employer Branding Funnel (Recruitment Funnel)**
+
+Stages:
+1. **Aided Awareness** - Kennen das Unternehmen
+2. **Familiar** - Vertraut mit dem Unternehmen
+3. **Shortlist** - Auf der Bewerbungsliste
+4. **Application** - Bewerbung abgeschickt
+5. **Preferred Employer** - Würde dort arbeiten wollen
+
+**Conversion Rates zeigen wo Probleme sind:**
+
+Beispiel BroadBand:
+- 90 → 33 (Familiar): 37% (schwach!)
+- 33 → 30 (Shortlist): 91%
+- 30 → 80 (Application): Wait, das kann nicht sein... 267%? Error in Exam
+- 24 → 40 (Preferred): Again weird...
+- 40 → 10 (Final): 25% (schwach!)
+
+Problem: BroadBand hat schlechte Conversion von Familiar zu aktiven Bewerbern',
+ARRAY['recruiting', 'employer-branding', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Exam Task 8: BroadBand vs DeepStar Analysis',
+'**BroadBand vs DeepStar (500 Students Survey)**
+
+BroadBand: 90 → 33 → 30 → 80 → 24 → 40 → 10
+DeepStar: 30 → 90 → 27 → 90 → 24 → 100 → 24
+
+**Statements:**
+
+APPLICABLE: "BroadBand''s biggest problem is proportion who want to work there if successful"
+→ 40 erreichen Application, nur 10 wollen wirklich dort arbeiten (25%)
+
+APPLICABLE: "BroadBand is more last resort compared to DeepStar"
+→ Siehe Preferred Employer Rate
+
+NOT APPLICABLE: "DeepStar doesn''t do good job turning interested into employees"
+→ DeepStar hat 100% Conversion von Application zu Preferred!
+
+APPLICABLE: "DeepStar performs better in all dimensions"
+→ Höhere Conversion Rates in allen Stages (außer anfänglichem Awareness)',
+ARRAY['recruiting', 'employer-branding', 'hr', 'exam', 'case-study']);

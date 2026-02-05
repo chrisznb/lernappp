@@ -1,0 +1,200 @@
+✓ Transparente Beförderungskriterien
+✓ Aktives Talent-Spotting (nicht nur warten, bis jemand sich bewirbt)
+✓ Strukturierter Beförderungsprozess
+✓ Succession Planning für alle kritischen Rollen
+✓ "Ready now, ready soon, ready later" statt nur "ready now"
+✓ High-Potential Programme mit diversen Teilnehmern',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'promotion']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #5: SPONSORSHIP',
+'**5. SPONSORSHIP (Förderung/Mentoring)**
+
+Core Problem:
+"Who is advocating for women behind closed doors?"
+- Männer haben mehr einflussreiche Sponsoren
+- Informal Networks begünstigen Männer
+- Mentoring ≠ Sponsorship
+
+Measures:
+✓ Formale Sponsorship-Programme einrichten
+✓ Senior Leaders aktiv Sponsoren für High-Potential-Frauen zuweisen
+✓ Sponsoren zur Rechenschaft ziehen (Was haben Sie für Ihre Protégés getan?)
+✓ Zugang zu informellen Netzwerken verbessern
+✓ "Sponsorship" ≠ "Mentorship" (Sponsor öffnet Türen, Mentor gibt Rat)',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'sponsorship']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #6: TALENT DEVELOPMENT',
+'**6. TALENT DEVELOPMENT (Talententwicklung)**
+
+Core Problem:
+"Are we providing equal development opportunities?"
+- Stretch Assignments gehen eher an Männer
+- Frauen bekommen "Office Housework"
+- Weniger Zugang zu kritischen Projekten
+
+Measures:
+✓ Faire Verteilung von High-Visibility-Projekten
+✓ Rotation durch verschiedene Bereiche
+✓ Leadership Development Programs mit Gender-Balance
+✓ "Office Housework" fair verteilen (nicht nur Frauen)
+✓ Internationale Assignments für alle
+✓ Kompetenz-basierte Zuweisung von Projekten',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'development']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Ammerman & Groysberg #7: RETENTION',
+'**7. RETENTION (Mitarbeiterbindung)**
+
+Core Problem:
+"Why are women leaving?"
+- Work-Life-Balance
+- Fehlende Flexibilität
+- Diskriminierung/Mikroaggressionen
+- Keine Role Models
+
+Measures:
+✓ Exit Interviews systematisch auswerten (Gender-spezifisch)
+✓ Flexible Arbeitsmodelle (für ALLE, nicht nur Mütter)
+✓ Karriere nach Elternzeit unterstützen
+✓ Inclusive Culture schaffen
+✓ Zero Tolerance für Diskriminierung
+✓ Female Role Models sichtbar machen
+✓ Re-Entry-Programme nach Karrierepausen',
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam', 'retention']);
+
+-- Multiple Choice: Gender Equality
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Welcher Talent Management Process fragt: "Who is advocating for women behind closed doors?"',
+'["Sponsorship", "Performance Evaluation", "Promotion", "Hiring"]',
+0,
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Was ist eine Maßnahme für fairen HIRING Prozess nach Ammerman & Groysberg?',
+'["Strukturierte Interviews und diverse Interview-Panels", "Gender-Quoten bei Beförderungen", "Höhere Gehälter für Frauen", "Mehr Mentoring-Programme"]',
+0,
+ARRAY['gender-equality', 'ammerman-groysberg', 'hr', 'exam']);
+
+-- ============================================
+-- MEDIUM PRIORITY: Personnel Planning
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'FTE-Berechnung: Formel und Beispiel',
+'**FTE (Full-Time Equivalent) Berechnung**
+
+Formel:
+```
+FTE = (Workload in Stunden) / (Verfügbare Stunden pro Mitarbeiter)
+```
+
+Komponenten:
+- Workload = Anzahl Tasks × Zeit pro Task
+- Verfügbare Stunden = Arbeitstage × Stunden/Tag × Auslastungsrate
+
+**Exam-Beispiel: QuickDrop Logistics**
+- 4 Mio. Pakete/Jahr
+- 4 Min/Paket
+- 80% Auslastung
+
+Annahmen (müssen explizit genannt werden!):
+- 250 Arbeitstage/Jahr
+- 8 Stunden/Tag = 2.000 Stunden/Jahr pro Person
+
+Workload: 4.000.000 × 4 Min = 16.000.000 Min = 266.667 Stunden
+Verfügbar pro Person: 2.000 × 0,8 = 1.600 Stunden
+**FTE = 266.667 / 1.600 = 167 Mitarbeiter**',
+ARRAY['hr-planning', 'personnel', 'calculation', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Saisonalität in Personnel Planning: Maßnahmen',
+'**Umgang mit Saisonalität (QuickDrop-Beispiel)**
+
+Situation:
+- Dezember: +25% über Durchschnitt
+- Juli/August: -10% unter Durchschnitt
+
+**Maßnahme 1: Flexible Workforce**
+"Einsatz von befristeten Saisonkräften im Dezember. Partner mit Personaldienstleistern für schnelle Aufstockung der Zusteller. Frühzeitige Rekrutierung ab Oktober."
+
+**Maßnahme 2: Variable Working Hours**
+"Flexible Arbeitszeitkonten: Mitarbeiter bauen im Dezember Überstunden auf, die im Sommer abgebaut werden. 4-Tage-Woche in Juli/August."
+
+Weitere Optionen:
+- Studentische Aushilfen (Dezember)
+- Urlaubs-Regelung (Haupturlaub Juli/August)
+- Outsourcing von Peak-Volumen
+- Incentives für Überstunden im Dezember',
+ARRAY['hr-planning', 'personnel', 'seasonality', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Personnel Planning: Wichtige Annahmen',
+'**Wichtige Annahmen bei FTE-Berechnung**
+
+IMMER explizit nennen im Exam:
+
+1. **Arbeitstage pro Jahr**
+   - Standard: 250 Tage (52 Wochen × 5 Tage - Feiertage/Urlaub)
+   - Oder: 220 Tage (mehr Urlaub)
+
+2. **Arbeitsstunden pro Tag**
+   - Standard: 8 Stunden
+   - Teilzeit entsprechend anpassen
+
+3. **Auslastungsrate**
+   - Oft gegeben (z.B. 80%)
+   - Berücksichtigt: Pausen, Meetings, Admin-Arbeit
+
+4. **Andere Faktoren**
+   - Krankheitsquote (ggf. zusätzlich ~5%)
+   - Fluktuationsrate
+   - Trainingszeit für neue Mitarbeiter
+   - Technische Ausfälle',
+ARRAY['hr-planning', 'personnel', 'calculation', 'hr', 'exam']);
+
+-- Multiple Choice: Personnel Planning
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Eine Delivery-Firma hat starke Saisonalität mit Peak im Dezember. Was ist KEINE geeignete Maßnahme?',
+'["Alle Mitarbeiter permanent einstellen für Peak-Kapazität", "Flexible Arbeitszeitkonten nutzen", "Saisonkräfte im Dezember einstellen", "Urlaub hauptsächlich im Sommer"]',
+0,
+ARRAY['hr-planning', 'personnel', 'hr', 'exam']);
+
+-- ============================================
+-- MEDIUM PRIORITY: Leadership Models
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Tuckman Phase 1: FORMING',
+'**FORMING (Orientierungsphase)**
+
+Relationship Level:
+- Höflich, vorsichtig, zurückhaltend
+- Gegenseitiges Kennenlernen
+- Unsicherheit über Rollen und Ziele
+- Abhängigkeit vom Leader
+
+Role of Leader:
+- **Direktiv und strukturierend**
+- Klare Ziele und Erwartungen kommunizieren
+- Rollen definieren
+- Regeln und Prozesse etablieren
+- Sicherheit geben
+
+Leadership Style (Hersey/Blanchard):
+**S1 - TELLING/DIRECTING**
+(High Task, Low Relationship)',
+ARRAY['teamwork', 'tuckman', 'leadership', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES

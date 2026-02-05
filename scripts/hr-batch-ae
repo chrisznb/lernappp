@@ -1,0 +1,200 @@
+- Dept Heads: 50/5 = 10
+- **Total: 60 Managers**
+
+**Änderung: +15 Manager**',
+ARRAY['leadership', 'span-of-control', 'calculation', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Faktoren für größeren Span of Control',
+'**Größerer Span of Control (MÖGLICH wenn):**
+
+✓ Einfache, routinemäßige Aufgaben
+✓ Ähnliche Aufgaben für alle
+✓ Kompetente, erfahrene Mitarbeiter
+✓ Klare Prozesse und Regeln
+✓ Geografisch konzentriert (alle im gleichen Büro)
+✓ Stabile Umgebung
+✓ Gute Kommunikationssysteme
+✓ Flache Hierarchie gewünscht
+
+**Exam-Beispiel (LARGER Span):**
+"Neue Teamleader geben Mitarbeitern viel Freiheit und nur groben Rahmen" → Reife Mitarbeiter brauchen weniger Supervision → Größerer Span möglich',
+ARRAY['leadership', 'span-of-control', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Faktoren für kleineren Span of Control',
+'**Kleinerer Span of Control (NÖTIG wenn):**
+
+✓ Komplexe, variierende Aufgaben
+✓ Häufige Änderungen der Arbeitsprozesse
+✓ Neue/unerfahrene Mitarbeiter
+✓ Geografisch verteilt
+✓ Persönliche Kommunikation nötig
+✓ Viel Koordination erforderlich
+
+**Exam-Beispiele (SMALLER Span):**
+1. "Mit flexiblen Arbeitszeitmodellen sind Teammitglieder nie gleichzeitig im Büro" → Schwieriger zu koordinieren → Kleinerer Span
+2. "Neue Claims-Regeln haben die Arbeit stark verändert, man muss sich ständig mit neuen Ansätzen vertraut machen" → Mehr Anleitung nötig → Kleinerer Span
+3. "Teamleader kommunizieren hauptsächlich persönlich in großen Meetings" → Zeitaufwendig → Kleinerer Span',
+ARRAY['leadership', 'span-of-control', 'hr', 'exam']);
+
+-- Multiple Choice: Span of Control
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Was deutet auf einen KLEINEREN Span of Control hin?',
+'["Mitarbeiter sind nie gleichzeitig im Büro (flexibles Arbeiten)", "Alle Mitarbeiter machen die gleiche einfache Tätigkeit", "Erfahrene Mitarbeiter mit hoher Autonomie", "Klare Prozesse und Regeln"]',
+0,
+ARRAY['leadership', 'span-of-control', 'hr', 'exam']);
+
+-- ============================================
+-- LOW PRIORITY: Cognitive Biases
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Availability Bias',
+'**Availability Bias**
+
+Definition:
+Menschen überschätzen die Wahrscheinlichkeit von Ereignissen, die leicht in Erinnerung gerufen werden können (verfügbar sind).
+
+Ursachen:
+- Mediale Berichterstattung
+- Persönliche Erfahrung
+- Emotionale Ereignisse
+
+**Exam-Beispiel:**
+"Leute haben Angst vor Impfungen, weil sie in den Nachrichten gelesen haben, dass ein berühmter Schauspieler schwere Nebenwirkungen hatte."
+
+→ Ein einzelner prominenter Fall wird überbewertet, obwohl statistisch Impfungen sehr sicher sind.',
+ARRAY['cognitive-bias', 'bias', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Halo Effect',
+'**Halo Effect**
+
+Definition:
+Ein herausragendes Merkmal überstrahlt alle anderen Eigenschaften (positiv oder negativ).
+
+In HR:
+- Attraktive Kandidaten werden als kompetenter eingeschätzt
+- Ein Fehler führt zu generell negativer Bewertung
+- Performance in einem Bereich beeinflusst Bewertung in anderen
+
+**Exam-Beispiel:**
+"Ein Saudi-Fußballclub stellt Cristiano Ronaldo für 200M EUR ein, um gesundes Leben in Saudi-Arabien zu fördern."
+
+→ Ronaldo ist großartiger Fußballer, aber das heißt nicht automatisch, dass er der beste Botschafter für gesundes Leben ist.',
+ARRAY['cognitive-bias', 'bias', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Confirmation Bias',
+'**Confirmation Bias**
+
+Definition:
+Tendenz, Informationen so zu suchen, zu interpretieren und zu erinnern, dass sie die eigenen Überzeugungen bestätigen.
+
+Auswirkungen:
+- Selective Exposure (nur bestätigende Quellen)
+- Selective Perception (nur bestätigende Infos wahrnehmen)
+- Selective Memory (nur bestätigende Infos erinnern)
+
+**Exam-Beispiel:**
+"Google versteht deine Präferenzen und rankt Suchergebnisse u.a. nach der Wahrscheinlichkeit, dass du sie anklickst."
+
+→ Du siehst hauptsächlich, was deine bestehende Meinung bestätigt (Filter Bubble).',
+ARRAY['cognitive-bias', 'bias', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Fundamental Attribution Error',
+'**Fundamental Attribution Error**
+
+Definition:
+Tendenz, das Verhalten anderer auf deren Persönlichkeit zurückzuführen, aber das eigene Verhalten auf Situationen.
+
+Beispiele:
+- "Er ist zu spät gekommen" → "Er ist unpünktlich" (internal)
+- "Ich bin zu spät gekommen" → "Es gab Stau" (external)
+
+In HR:
+- Schlechte Performance → "faul" statt "schlechte Prozesse"
+- Erfolg anderer → "Glück" statt "Kompetenz"
+
+**Exam-Beispiel:**
+"Deutsche investieren hauptsächlich in Aktien deutscher Unternehmen."
+
+→ Home Bias, nicht Attribution Error! (Das wäre eine Fangfrage)',
+ARRAY['cognitive-bias', 'bias', 'hr', 'exam']);
+
+-- Multiple Choice: Cognitive Biases
+INSERT INTO cards (user_id, subject_id, card_type, front, options, correct_option, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'multiple_choice',
+'Google zeigt dir Suchergebnisse, die du wahrscheinlich anklickst. Welcher Bias?',
+'["Confirmation Bias", "Availability Bias", "Halo Effect", "Fundamental Attribution Error"]',
+0,
+ARRAY['cognitive-bias', 'bias', 'hr', 'exam']);
+
+-- ============================================
+-- LOW PRIORITY: Reiss Profile
+-- ============================================
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Reiss Profile: Overview',
+'**Reiss Motivation Profile**
+
+16 Basic Desires:
+1. Power (Macht)
+2. Independence (Unabhängigkeit)
+3. Curiosity (Neugier)
+4. Acceptance (Anerkennung)
+5. Order (Ordnung)
+6. Saving (Sparen)
+7. Honor (Ehre)
+8. Idealism (Idealismus)
+9. Social Contact (Soziale Kontakte)
+10. Family (Familie)
+11. Status (Status)
+12. Vengeance (Rache)
+13. Romance (Romantik)
+14. Eating (Essen)
+15. Physical Activity (Bewegung)
+16. Tranquility (Emotionale Ruhe)
+
+Jedes Motiv kann stark oder schwach ausgeprägt sein.',
+ARRAY['motivation', 'reiss-profile', 'hr', 'exam']);
+
+INSERT INTO cards (user_id, subject_id, card_type, front, back, tags) VALUES
+('12439635-0b75-466d-bd9a-f2e98dcc3756', 'f1c31287-e2d3-4981-ae57-717a34d7551c', 'basic',
+'Reiss Profile: Store Manager Exam Case',
+'**Store Manager Position (20 Mitarbeiter)**
+
+Anforderungen:
+- Team von 12 Mitarbeitern führen
+- Ansprechpartner für Kunden
+- Verbindung zwischen Kunden und operativen Einheiten
+- Positive, kommunikative Art
+
+**Geeignete Motivationen:**
+
+FALSE: "Starkes Machtstreben hilft, weil er Geld sparen will"
+→ Power ≠ Saving, falscher Zusammenhang
+
+TRUE: "Niedriges Streben nach emotionaler Ruhe hilft, gestresste Mitarbeiter zu beruhigen"
+→ Bleibt selbst in stressigen Situationen ruhig
+
+FALSE: "Starkes Unabhängigkeitsstreben hilft für engen Mitarbeiterkontakt"
+→ Unabhängigkeit widerspricht engem Kontakt
+
+FALSE: "Starke soziale Anerkennung + emotionale Ruhe helfen bei unpopulären Entscheidungen"
+→ Wer Anerkennung braucht, tut sich schwer mit unpopulären Entscheidungen
+
+FALSE: "Starkes Rache-Streben hilft bei Konfliktlösung"
+→ Rache ist kontraproduktiv für Mediation
+
+TRUE: "Niedriges Streben nach sozialem Kontakt hilft NICHT beim Verbinden von Kunden und Einheiten"
