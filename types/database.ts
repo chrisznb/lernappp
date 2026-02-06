@@ -17,6 +17,7 @@ export interface Database {
           color: string | null
           icon: string | null
           created_at: string
+          parent_subject_id: string | null
         }
         Insert: {
           id?: string
@@ -25,6 +26,7 @@ export interface Database {
           color?: string | null
           icon?: string | null
           created_at?: string
+          parent_subject_id?: string | null
         }
         Update: {
           id?: string
@@ -33,6 +35,7 @@ export interface Database {
           color?: string | null
           icon?: string | null
           created_at?: string
+          parent_subject_id?: string | null
         }
       }
       cards: {

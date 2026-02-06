@@ -29,13 +29,36 @@ export default async function ManageCardsPage({
     redirect('/dashboard/subjects')
   }
 
-  // Fetch all cards for this subject
-  const { data: cards } = await supabase
-    .from('cards')
-    .select('*')
-    .eq('subject_id', id)
-    .eq('user_id', user.id)
-    .order('created_at', { ascending: false })
+  // Check if subject has children
+  const { data: children } = await supabase
+    .from('subjects')
+    .select('id')
+    .eq('parent_subject_id', id) as any
+
+  let cards
+
+  if (children && children.length > 0) {
+    // This is a parent subject, fetch cards from all children
+    const childIds = children.map((c: any) => c.id)
+    const result = await supabase
+      .from('cards')
+      .select('*')
+      .in('subject_id', childIds)
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false }) as any
+
+    cards = result.data
+  } else {
+    // This is a leaf subject, fetch cards directly
+    const result = await supabase
+      .from('cards')
+      .select('*')
+      .eq('subject_id', id)
+      .eq('user_id', user.id)
+      .order('created_at', { ascending: false }) as any
+
+    cards = result.data
+  }
 
   return <CardManager subject={subject} initialCards={cards || []} userId={user.id} />
 }

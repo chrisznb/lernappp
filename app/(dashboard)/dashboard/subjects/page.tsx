@@ -12,14 +12,15 @@ export default async function SubjectsPage() {
 
   if (!user) return null
 
-  // Fetch user's subjects (RLS ensures only their own)
+  // Fetch user's subjects (RLS ensures only their own) - only parent subjects
   const { data: subjects } = await supabase
     .from('subjects')
     .select('*')
     .eq('user_id', user.id)
+    .is('parent_subject_id', null)
     .order('exam_date', { ascending: true }) as any
 
-  // Fetch card counts for each subject
+  // Fetch card counts and children for each subject
   const subjectsWithCardCounts = await Promise.all(
     (subjects || []).map(async (subject: any) => {
       const { count } = await supabase
@@ -28,9 +29,17 @@ export default async function SubjectsPage() {
         .eq('subject_id', subject.id)
         .eq('user_id', user.id) as any
 
+      // Fetch children subjects
+      const { data: children } = await supabase
+        .from('subjects')
+        .select('*')
+        .eq('parent_subject_id', subject.id)
+        .order('name', { ascending: true }) as any
+
       return {
         ...subject,
         cardCount: count || 0,
+        children: children || [],
       }
     })
   )
@@ -53,6 +62,10 @@ export default async function SubjectsPage() {
           )
           const isPriority = daysLeft <= 30
           const isUpcoming = daysLeft <= 7
+          const hasChildren = subject.children && subject.children.length > 0
+          const studyLink = hasChildren
+            ? `/dashboard/subjects/${subject.id}`
+            : `/dashboard/study/${subject.id}`
 
           return (
             <Card
@@ -69,6 +82,11 @@ export default async function SubjectsPage() {
                       <CardTitle className="text-lg leading-tight">
                         {subject.name}
                       </CardTitle>
+                      {hasChildren && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          {subject.children.length} Module
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -109,7 +127,7 @@ export default async function SubjectsPage() {
 
                 {/* Action Buttons */}
                 <div className="pt-2 flex gap-2">
-                  <Link href={`/dashboard/study/${subject.id}`} className="flex-1">
+                  <Link href={studyLink} className="flex-1">
                     <Button className="w-full" size="sm">
                       Learn
                     </Button>
